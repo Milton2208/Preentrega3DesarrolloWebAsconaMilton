@@ -1,0 +1,155 @@
+//Estilos de background,nav bar,animaciones con variables nesting, y mixin
+
+// Variables
+$font-stack: Arial, Helvetica, sans-serif;
+$background-color: #1d181854;
+$navbar-bg: #000000;
+$nav-link-color: rgb(254, 254, 254);
+$nav-link-margin: 4em;
+$container-img-width: 20%;
+$principal-bg-img: url(../img/band1.jpg);
+$animation-duration: 5s;
+$redes-icon-bg: #000000;
+$redes-icon-hover-bg: #555;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin animation($name, $duration, $timing-function) {
+  animation: #{$name} #{$duration} #{$timing-function};
+}
+
+
+
+body {
+  background-color: $background-color;
+}
+
+// Estilos de header y el nav bar
+.navbar {
+  background-color: $navbar-bg;
+}
+
+.navbar-nav {
+  .nav-link {
+    color: $nav-link-color;
+    margin-right: $nav-link-margin;
+    text-decoration: none;
+    transition: all .5S;
+  }
+  
+}
+
+.navbar-nav{
+  .nav-link:hover{
+    color: #8b362f;
+    transform: scaleY(1.2);
+  }
+}
+
+// Estilos de container main
+.container-fluid {
+  img {
+    width: $container-img-width;
+  }
+}
+
+// Estilos del contenedor principal
+.principal {
+  background-image: $principal-bg-img;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex-center;
+  height: 100vh;
+  margin: 0;
+  @include animation(aparecer, $animation-duration, ease-in);
+}
+
+// Fondo1 container estilos
+.fondo1 {
+  @include flex-center;
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+  @include animation(aparecer, $animation-duration, ease-in);
+}
+
+// Estilos de imagenes
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Keyframes
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Estilos de botones de redes sociales
+.redes-iconos {
+  @include flex-center;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+
+  li {
+    margin: 0 10px;
+  }
+
+  a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: $redes-icon-bg;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $redes-icon-hover-bg;
+    }
+  }
+}
+
+// Variables para el footer
+$footer-height: 50px;
+$footer-bg-color: #000000;
+$footer-padding-right: 40px;
+$footer-margin-top: 15px;
+$footer-margin: 0px 1px;
+$footer-img-width: 5%;
+
+// Mixins para el footer
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Footer 
+footer {
+  height: $footer-height;
+  background-color: $footer-bg-color;
+  padding-right: $footer-padding-right;
+  @include flex-center;
+  margin-top: $footer-margin-top;
+  margin: $footer-margin;
+
+  img {
+    width: $footer-img-width;
+  }
+}

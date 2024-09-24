@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgba(29, 24, 24, 0.3294117647);
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(254, 254, 254);
+  margin-right: 4em;
+  text-decoration: none;
+  transition: all 0.5S;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8b362f;
+  transform: scaleY(1.2);
+}
+
+.container-fluid img {
+  width: 20%;
+}
+
+.principal {
+  background-image: url(../img/band1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  animation: aparecer 5s ease-in;
+}
+
+.fondo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+  animation: aparecer 5s ease-in;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.redes-iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.redes-iconos li {
+  margin: 0 10px;
+}
+.redes-iconos a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #000000;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.redes-iconos a:hover {
+  background-color: #555;
+}
+
+footer {
+  height: 50px;
+  background-color: #000000;
+  padding-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin: 0px 1px;
+}
+footer img {
+  width: 5%;
+}
+
+main .historia {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(23, 20, 20);
+}
+main .historia h1 {
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 15px;
+}
+main .historia p {
+  margin-top: 15px;
+}
+main .banda1, main .banda2, main .banda3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .banda1 img, main .banda2 img, main .banda3 img {
+  width: 90%;
+  margin-top: 30px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.flex-container .text {
+  margin-bottom: 20px;
+}
+.flex-container .text h2 {
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 15px;
+  color: #000000;
+}
+.flex-container .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Estilos de section MERCH */
+.producto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.producto-grid .producto-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+.producto-grid .producto-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.producto-grid .producto-card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.producto-grid .producto-card p {
+  margin: 10px 0;
+}
+.producto-grid .producto-card .precio {
+  font-size: 1.2em;
+  color: #333;
+}
+.producto-grid .producto-card button {
+  background-color: #000000;
+  color: #decfcf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.producto-grid .producto-card button:hover {
+  background-color: #8b362f;
+}
+
+/* Estilos del section del formulario */
+.formulario-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+}
+.formulario-section form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+.formulario-section form .formulario-group {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-section form .formulario-group h2 {
+  text-align: center;
+}
+.formulario-section form label {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.formulario-section form input, .formulario-section form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formulario-section form button {
+  background-color: #000000;
+  color: #decfcf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.formulario-section form button:hover {
+  background-color: #8b362f;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-right: 1em;
+  }
+  .container-fluid img {
+    width: 50%;
+  }
+  .principal {
+    height: 50vh;
+  }
+  .fondo1 {
+    width: 100%;
+    padding: 5px;
+  }
+  .redes-iconos a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  footer img {
+    width: 10%;
+  }
+}
+@media (max-width: 768px) {
+  main .historia {
+    font-size: 16px;
+  }
+  main .historia h1 {
+    font-size: 30px;
+  }
+  main .banda1 img, main .banda2 img, main .banda3 img {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .flex-container .text h2 {
+    font-size: 30px;
+  }
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+  .producto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .producto-grid .producto-card button {
+    padding: 8px 16px;
+  }
+  .formulario-section form {
+    padding: 15px;
+  }
+  .formulario-section form button {
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar-nav .nav-link {
+    margin-right: 2em;
+  }
+  .container-fluid img {
+    width: 40%;
+  }
+  .principal {
+    height: 70vh;
+  }
+  .fondo1 {
+    width: 90%;
+    padding: 10px;
+  }
+  .redes-iconos a {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+  footer img {
+    width: 8%;
+  }
+  main .historia {
+    font-size: 18px;
+  }
+  main .historia h1 {
+    font-size: 40px;
+  }
+  main .banda1 img, main .banda2 img, main .banda3 img {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .flex-container .text h2 {
+    font-size: 40px;
+  }
+  .galeria {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .producto-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .producto-grid .producto-card button {
+    padding: 10px 18px;
+  }
+  .formulario-section form {
+    padding: 18px;
+  }
+  .formulario-section form button {
+    padding: 10px 18px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

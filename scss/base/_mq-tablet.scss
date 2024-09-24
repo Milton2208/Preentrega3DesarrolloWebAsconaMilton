@@ -1,0 +1,85 @@
+@media (max-width: 1024px) {
+    .navbar-nav {
+      .nav-link {
+        margin-right: 2em;
+      }
+    }
+  
+    .container-fluid {
+      img {
+        width: 40%;
+      }
+    }
+  
+    .principal {
+      height: 70vh;
+    }
+  
+    .fondo1 {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .redes-iconos {
+      a {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+      }
+    }
+  
+    footer {
+      img {
+        width: 8%;
+      }
+    }
+  
+    main {
+      .historia {
+        font-size: 18px;
+  
+        h1 {
+          font-size: 40px;
+        }
+      }
+  
+      .banda1, .banda2, .banda3 {
+        img {
+          width: 95%;
+          margin-top: 20px;
+        }
+      }
+    }
+  
+    .flex-container {
+      .text {
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  
+    .galeria {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  
+    .producto-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+      .producto-card {
+        button {
+          padding: 10px 18px;
+        }
+      }
+    }
+  
+    .formulario-section {
+      form {
+        padding: 18px;
+  
+        button {
+          padding: 10px 18px;
+        }
+      }
+    }
+  }

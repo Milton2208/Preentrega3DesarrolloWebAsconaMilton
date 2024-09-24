@@ -1,0 +1,37 @@
+// Variables
+$galeria-gap: 10px;
+$galeria-width: 90%;
+$galeria-max-width: 1200px;
+$galeria-margin: 15px auto;
+$image-border-radius: 8px;
+
+// Mixins
+@mixin grid-layout($columns, $gap) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin auto-margin {
+  margin: auto;
+}
+
+// Estilos de galeria
+.galeria {
+  @include grid-layout(repeat(auto-fill, minmax(200px, 1fr)), $galeria-gap);
+  width: $galeria-width;
+  max-width: $galeria-max-width;
+  @include auto-margin;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+// Estilos de imagenes
+.imagen {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: $image-border-radius;
+  }
+}
